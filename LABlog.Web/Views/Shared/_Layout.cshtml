@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>A Broad Margin of Leisure | @ViewBag.Page</title>
+    <meta name="description" content="The description of my page" />
+</head>
+<body ng-app="app">
+
+
+    @RenderBody()
+    <script src="public/vendor/angular.min.js"></script>
+    <script src="public/vendor/angular-resource.min.js"></script>
+    <script src="public/vendor/angular-sanitize.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.core.module.js"></script>
+    <script src="app/admin/admin.module.js"></script>
+    <script src="app/categories/categories.module.js"></script>
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/posts/posts.module.js"></script>
+    <script src="app/services/services.module.js"></script>
+    <script src="app/sidebar/sidebar.module.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

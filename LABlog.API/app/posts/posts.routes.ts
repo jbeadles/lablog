@@ -8,16 +8,24 @@
     config.$inject = ["$stateProvider", "$urlRouterProvider"];
 
     
-    var config = ($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider): void => {
+    function config ($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider): void {
 
-        $urlRouterProvider.otherwise("/posts");
+        $urlRouterProvider.otherwise("/");
 
         $stateProvider
 
-        // HOME STATES AND NESTED VIEWS =====================================
             .state("posts", {
                 url: "/posts",
-            templateUrl: "posts.html"
+                templateUrl: "app/posts/posts.published.html",
+                controller: "PostsPublishedController",
+                controllerAs: "posts"
+            })
+
+            .state("post", {
+                url: "/posts/:id",
+                templateUrl: "app/posts/post.single.html",
+                controller: "PostSingleController",
+                controllerAs: "post"
             });
 
     };

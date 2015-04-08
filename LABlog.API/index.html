@@ -1,11 +1,32 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <base href="/" />
     <title>A Broad Margin of Leisure | LA Beadles</title>
 </head>
-<body>
+<body ng-app="app">
 
     <h1>A Broad Margin of Leisure</h1>
+    <a ui-sref="posts">Posts</a>
 
+    <div ui-view></div>
+
+
+
+    <script src="public/vendor/angular.min.js"></script>
+    <script src="public/vendor/angular-resource.min.js"></script>
+    <script src="public/vendor/angular-sanitize.min.js"></script>
+    <script src="public/vendor/angular-ui-router.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.core.module.js"></script>
+    <script src="app/admin/admin.module.js"></script>
+    <script src="app/blocks/blocks.module.js"></script>
+    <script src="app/categories/categories.module.js"></script>
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/posts/posts.module.js"></script>
+    <script src="app/posts/posts.routes.js"></script>
+    <script src="app/posts/posts.controller.js"></script>
+    <script src="app/services/services.module.js"></script>
 </body>
 </html>
